@@ -4,16 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Inventory.generated.h"
+#include "Components/SphereComponent.h"
+#include "Collectable.generated.h"
 
 UCLASS()
-class ELVIS_ESCAPE_API AInventory : public AActor
+class ELVIS_ESCAPE_API ACollectable : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AInventory();
+	ACollectable();
 
 protected:
 	// Called when the game starts or when spawned
@@ -22,5 +23,10 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	UStaticMeshComponent* mesh;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	USphereComponent* collider;
 
 };
