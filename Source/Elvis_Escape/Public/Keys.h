@@ -7,14 +7,14 @@
 #include "Item.h"
 #include "Keys.generated.h"
 
-UENUM(BlueprintType)
-enum EKeysType
-{
-	GOLD UMETA(DisplayName = "Gold"),
-	SILVER UMETA(DisplayName = "Silver"),
-	BRONZE UMETA(DisplayName = "Bronze")
-	
-};
+// UENUM(BlueprintType)
+// enum EKeysType
+// {
+// 	GOLD UMETA(DisplayName = "Gold"),
+// 	SILVER UMETA(DisplayName = "Silver"),
+// 	BRONZE UMETA(DisplayName = "Bronze")
+// 	
+// };
 
 UCLASS()
 class ELVIS_ESCAPE_API AKeys : public AItem
@@ -32,7 +32,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-	TEnumAsByte<EKeysType>EnumKeys;
+	// UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+	// TEnumAsByte<EKeysType>EnumKeys;
 
 };

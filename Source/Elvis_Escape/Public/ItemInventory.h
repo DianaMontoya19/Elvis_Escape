@@ -3,13 +3,22 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Item.h"
 #include "ItemInventory.generated.h"
 
 /**
  * 
  */
-
+UENUM(BlueprintType)
+enum EItemType
+{
+	GoldKeys UMETA(DisplayName = "GoldKeys"),
+	SilverKeys UMETA(DisplayName = "SilverKeys"),
+	BronzeKeys UMETA(DisplayName = "BronzeKeys"),
+	PotionGreen UMETA(DisplayName = "PotionGreen"),
+	PotionBlue UMETA(DisplayName = "PotionBlue")
+	
+	
+};
 UCLASS()
 class ELVIS_ESCAPE_API UItemInventory : public UPrimaryDataAsset
 {
@@ -18,7 +27,7 @@ class ELVIS_ESCAPE_API UItemInventory : public UPrimaryDataAsset
 public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory")
-	TArray<AItem*> Items; 
+	TEnumAsByte<EItemType>TypeItem;
 	
 	
 	
