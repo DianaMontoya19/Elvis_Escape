@@ -3,11 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Framework/Styling/TextBlockWidgetStyle.h"
 #include "ItemInventory.generated.h"
 
 /**
  * 
  */
+
 UENUM(BlueprintType)
 enum EItemType
 {
@@ -28,7 +30,8 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory")
 	TEnumAsByte<EItemType>TypeItem;
-	
-	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory")
+	UTexture2D* DynamicTexture;
+
 	
 };
