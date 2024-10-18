@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Framework/Styling/TextBlockWidgetStyle.h"
 #include "ItemInventory.generated.h"
 
 /**
@@ -28,10 +27,10 @@ class ELVIS_ESCAPE_API UItemInventory : public UPrimaryDataAsset
 
 public:
 	
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TEnumAsByte<EItemType>TypeItem;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory")
-	UTexture2D* DynamicTexture;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UTexture2D* Image;
 
 	
 };
